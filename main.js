@@ -29,6 +29,10 @@ const carousel = (content) => {
 }
 
 document.addEventListener("DOMContentLoaded", ()=>{
+    window.addEventListener("scroll", function(){
+        const header = document.querySelector(".navbar");
+        header.classList.toggle("sticky", window.scrollY > 0);
+    })
     const content = document.querySelector(".img-carousel");
     carousel(content);
 })
