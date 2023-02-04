@@ -7,9 +7,10 @@
 
 html, body {
     min-height: 1000px;
-    font-family: 'Arsenal', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
+/*====================== NAVBAR =======================*/
 .navbar {
     position: fixed;
     background-color: rgb(244, 242, 239);
@@ -87,6 +88,7 @@ html, body {
     }
 }
 
+/*====================== HERO =======================*/
 .img-carousel {
     position: relative;
     width: 100%;
@@ -135,4 +137,18 @@ html, body {
 .next {
     right: 2%;
     top: 50%;
+}
+
+/*====================== ABOUT ME =======================*/
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: rgb(221, 218, 214);
+}
+
+.about-img {
+    height: 300px;
+    width: 250px;
 }
