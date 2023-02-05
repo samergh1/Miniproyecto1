@@ -56,12 +56,31 @@ const carousel = (content) => {
 }
 
 const skills = (jsonObject) => {
-    const fragment = document.createDocumentFragment();
     const skillsList = document.querySelector(".skills-list");
 
     for (const skill of jsonObject){
         const name = skill.skillName;
         const progress = skill.progress;
+
+        const nameList = document.createElement('div');
+        nameList.textContent = `${name} - ${progress}`;
+        nameList.className = "name-list";
+
+        const progressBar = document.createElement('div');
+        progressBar.className = "progress-bar";
+
+        const progressList = document.createElement('div');
+        progressList.style.maxWidth = progress;
+        progressList.className = "progress-list";
+
+        const skills = document.createElement('div');
+        skills.className = "skill"
+        
+        skillsList.appendChild(skills);
+        skills.appendChild(nameList);
+        skills.appendChild(progressBar);
+        progressBar.appendChild(progressList);
+        console.log(skillsList);
     }
 }
 
