@@ -84,7 +84,24 @@ const skills = (jsonObject) => {
 }
 
 const validateEmail = (email) => {
-    
+    const validEmail = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)$/;
+    let validation = true;
+
+    if (!email.value.match(validEmail)) {
+      validation = false;
+    }
+
+    return validation;
+}
+
+const validateText = (text) => {
+    let validation = true;
+
+    if (text.value === ""){
+        validation = false;
+    }
+
+    return validation;
 }
 
 const init = () => {
@@ -96,6 +113,19 @@ const init = () => {
         const content = document.querySelector(".img-carousel");
         carousel(content);
         skills(skillsJson);
+
+        const sendBtn = document.querySelector(".send-btn");
+        const name = document.querySelector(".name-input");
+        const email = document.querySelector(".email-input");
+        const msg = document.querySelector(".text-area");
+        
+        sendBtn.addEventListener("click", () => {
+            if (validateEmail(email) && validateText(name) && validateText(msg)){
+                alert("Su mensaje ha sido enviado con éxito");
+            } else {
+                alert("Verifique los datos");
+            }
+        })
     })
 }
 
