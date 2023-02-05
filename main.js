@@ -1,3 +1,30 @@
+let skillsJson = [
+    {
+        "skillName": "Python",
+        "progress": "80%"
+    },
+
+    {
+        "skillName": "Java",
+        "progress": "75%"
+    },
+
+    {
+        "skillName": "JavaScript",
+        "progress": "40%"
+    },
+
+    {
+        "skillName": "HTML",
+        "progress": "60%"
+    },
+
+    {
+        "skillName": "CSS",
+        "progress": "55%"
+    }
+]
+
 const carousel = (content) => {
     let images = ["images/img1.jpg", "images/img2.jpg", "images/img3.jpg"];
     let cont = 0;
@@ -28,14 +55,25 @@ const carousel = (content) => {
     })
 }
 
+const skills = (jsonObject) => {
+    const fragment = document.createDocumentFragment();
+    const skillsList = document.querySelector(".skills-list");
+
+    for (const skill of jsonObject){
+        const name = skill.skillName;
+        const progress = skill.progress;
+    }
+}
+
 const init = () => {
     document.addEventListener("DOMContentLoaded", ()=>{
-    window.addEventListener("scroll", function(){
-        const header = document.querySelector(".navbar");
-        header.classList.toggle("sticky", window.scrollY > 0);
-    })
-    const content = document.querySelector(".img-carousel");
-    carousel(content);
+        window.addEventListener("scroll", function(){
+            const header = document.querySelector(".navbar");
+            header.classList.toggle("sticky", window.scrollY > 0);
+        })
+        const content = document.querySelector(".img-carousel");
+        carousel(content);
+        skills(skillsJson);
     })
 }
 

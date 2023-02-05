@@ -233,14 +233,14 @@ html, body {
     background-image: radial-gradient(circle at 31.86% 0.17%, #fcfcf7 0, #f6f4ef 50%, #f0ece2 100%);
 }
 
-.wrapper{
+.wrapper {
     max-width: 1080px;
     margin: 50px auto;
     padding: 0 20px;
     position: relative;
 }
 
-.center-line{
+.center-line {
     position: absolute;
     height: 75%;
     width: 4px;
@@ -250,19 +250,19 @@ html, body {
     transform: translateX(-50%);
 }
 
-.row{
+.row {
     display: flex;
 }
 
-.row-1{
+.row-1 {
     justify-content: flex-start;
 }
 
-.row-2{
+.row-2 {
     justify-content: flex-end;
 }
 
-.row section{
+.row section {
     background: #fff;
     border-radius: 5px;
     width: calc(50% - 40px);
@@ -270,7 +270,7 @@ html, body {
     position: relative;
 }
 
-.row section::before{
+.row section::before {
     position: absolute;
     content: "";
     height: 15px;
@@ -281,11 +281,11 @@ html, body {
     transform: rotate(45deg);
 }
 
-.row-1 section::before{
+.row-1 section::before {
     right: -7px;
 }
 
-.row-2 section::before{
+.row-2 section::before {
     left: -7px;
 }
 
@@ -299,28 +299,28 @@ html, body {
     box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgba(0,0,0,0.08), 0 3px 0 4px rgba(0,0,0,0.05);
 }
 
-.row-1 section .icon{
+.row-1 section .icon {
     top: 15px;
     right: -60px;
 }
 
-.row-2 section .icon{
+.row-2 section .icon {
     top: 15px;
     left: -60px;
 }
 
-.details{
+.details {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.title{
+.proyect-title {
     font-size: 22px;
     font-weight: 600;
 }
 
-.row section p{
+.row section p {
     margin: 15px 0 17px 0;
 }
 
@@ -335,7 +335,7 @@ html, body {
     gap: 10px;
 }
 
-.bottom a {
+.proyect-link {
     text-decoration: none;
     background: #ff7979;
     color: #fff;
@@ -345,33 +345,33 @@ html, body {
     transition: all 0.3s ease;
 }
 
-.bottom a:hover {
+.proyect-link:hover {
     transform: scale(1.05);
 }
 
-@media screen and (max-width: 885px){
-    .wrapper .center-line{
+@media screen and (max-width: 885px) {
+    .center-line {
         left: 40px;
     }
     
-    .row{
+    .row {
         margin: 30px 0 3px 60px;
     }
 
-    .wrapper .row section{
+    .row section {
         width: 100%;
     }
 
-    .row-1 section::before{
+    .row-1 section::before {
         left: -7px;
     }
 
-    .row-1 section .icon{
+    .row-1 section .icon {
         left: -60px;
     }
 }
 
-@media screen and (max-width: 580px){
+@media screen and (max-width: 580px) {
     .experience {
         align-items: center;
         justify-content: center;
@@ -387,7 +387,7 @@ html, body {
     }
 }
 
-@media screen and (max-width: 450px){
+@media screen and (max-width: 450px) {
     .experience {
         padding: 30px;
     }
@@ -399,4 +399,10 @@ html, body {
     .details span {
         font-size: 10px;
     }
+}
+
+/*====================== SKILLS =======================*/
+.skills {
+    padding: 80px;
+    background-image: radial-gradient(circle at 76.52% 95.93%, #e1e0d5 0, #c7c4b4 50%, #bcb89e 100%);
 }
