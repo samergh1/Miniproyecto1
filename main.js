@@ -80,8 +80,11 @@ const skills = (jsonObject) => {
         skills.appendChild(nameList);
         skills.appendChild(progressBar);
         progressBar.appendChild(progressList);
-        console.log(skillsList);
     }
+}
+
+const validateEmail = (email) => {
+    
 }
 
 const init = () => {

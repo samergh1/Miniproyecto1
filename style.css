@@ -268,6 +268,7 @@ html, body {
     width: calc(50% - 40px);
     padding: 20px;
     position: relative;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 .row section::before {
@@ -432,4 +433,161 @@ html, body {
     height: 9px;
     background-color: #3c95a5;
     border-radius: 15px;
+}
+
+/*====================== CONTACT ME =======================*/
+.contact {
+    padding: 80px;
+    background-image: radial-gradient(circle at 31.86% 0.17%, #fcfcf7 0, #f6f4ef 50%, #f0ece2 100%);
+}
+
+.contact-box {
+    width: 100%;
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f3e6e6;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+
+}
+
+.contact-form {
+    background-color: #b3eaf4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    list-style: none;
+}
+
+.info-list li {
+    display: flex;
+    align-items: center;
+}
+
+.info-list li img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.info-list li span {
+    text-align: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.social-media {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+    justify-content: left;
+}
+
+.social-media li img{
+    width: 50px;
+    height: 50px;
+}
+
+.info-list li a:hover, .social-media li img:hover {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    transform: scale(1.1);
+}
+
+.info-title, .form-title {
+    font-size: 35px;
+    text-align: center;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-input {
+    width: 100%;
+    outline: none;
+    border: 2px solid rgb(150, 186, 193);
+    background: none;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.text-area {
+    min-height: 100px;
+    resize: none;
+    overflow-y: auto;
+}
+.send-btn {
+    background-color: #3d55dd;
+    border: 1px solid rgb(150, 186, 193);;
+    padding: 10px 40px;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 400;
+    color: #ffffff;
+    opacity: .8;
+}
+
+.send-btn:hover {
+    transform: scale(1.1);
+}
+
+.form-title {
+    margin-bottom: 20px;
+} 
+
+@media screen and (max-width: 1050px) {
+    .contact-box {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-info {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .contact {
+        padding: 30px;
+    }
+
+    .info-list li span {
+        font-size: 15px;
+    }
+
+    .social-media li img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .info-list li img {
+        width: 25px;
+        height: 25px;
+    }
 }
